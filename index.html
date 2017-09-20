@@ -1,6 +1,30 @@
 <html>
 <head>
+<script>
+var scores = [document.getElementById("score1").value, document.getElementById("score2").value, document.getElementById("score3").value, document.getElementById("score4").value, document.getElementById("score5").value];
 
+var letterConvert = {
+  A: 4.0,
+  A-: 3.7,
+  B+: 3.3,
+  B: 3.0,
+  B-: 2.7,
+  C+: 2.3,
+  C: 2.0,
+  C-: 1.7,
+  D+: 1.3,
+  D: 1.0,
+  D-: 0.7,
+  F: 0.0,
+  E: 0.0
+} 
+
+var calculate = function() {
+  
+
+}
+
+</script>
 </head>
 <body>
 <h1>Welcome to the GPA calculator!</h1>
@@ -15,5 +39,7 @@ Enter Letter Score: <input type="text" id="score4">
 Enter Letter Score: <input type="text" id="score5">
 
 </div>
+
+<button type="button" onclick="calculate()">Calculate</button>
 </body>
 </html>
