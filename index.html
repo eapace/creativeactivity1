@@ -3,7 +3,8 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 <title>GPA Caluclator</title>
 </head>
-<body>
+<body bgColor="beige">
+<h1 align="center">Welcome to the GPA calculator!</h1>
 <script>
 var scores = [document.getElementById("score1").value, document.getElementById("score2").value, document.getElementById("score3").value, document.getElementById("score4").value, document.getElementById("score5").value];
 
@@ -39,11 +40,13 @@ function calculate() {
    GPA = (totalPoints / numGrades);
    console.log(GPA);
   }
-  document.getElementById("display").innerHTML = "Just Kidding. I don't actually want to display your GPA. But here is a picture of a puppy! <img id=\"Pupper\" src=\"http://www.pawderosa.com/images/puppies.jpg\" width=\"400px\"> Here is a link to more puppies! <a href=\"https://www.reddit.com/r/rarepuppers\">Rare Puppers</a> <a href=\"https://www.reddit.com/r/doggos\">Normal Doggos</a> <a href=\"https://www.reddit.com/r/Sneks\">Sneks</a>";
 };
 
+function newfunc(){
+  document.getElementById("display").innerHTML = "<p>Just Kidding. I don't actually want to display your GPA.<br> But here is a picture of a puppy!<br> <img id=\"Pupper\" src=\"http://www.pawderosa.com/images/puppies.jpg\" width=\"400px\"> <br>Don't stress about GPA! Look at more puppies!<br> <a href=\"https://www.reddit.com/r/rarepuppers\">Rare Puppers</a> <a href=\"https://www.reddit.com/r/doggos\">Normal Doggos</a> <a href=\"https://www.reddit.com/r/Sneks\">Sneks</a> </p>";
+};
 </script>
-<p id="heading">Welcome to the GPA calculator!</p>
+
 <p>Input your Letter GPA scores.</p>
 
 <div id="allScores">
@@ -56,8 +59,8 @@ Enter Letter Score: <input type="text" id="score5">
 
 </div>
 <div id="buttondiv">
-<button id="bttn" type="button" onclick="calculate()">Calculate</button>
-<p id="display">Result</p>
+<button id="bttn" type="button" onclick="newfunc()">Calculate</button>
+<p id="display"></p>
 
 </div>
 </body>

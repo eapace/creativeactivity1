@@ -1,9 +1,7 @@
-<style>
-
-#heading {
-  text-align: center;
-  font-size: 50px;
-  color: blue;
+h1 {
+  color:blue;
+  font-family: verdana;
+  font-size: 130px;
 }
 
 p {
@@ -16,11 +14,15 @@ p {
 }
 
 #bttn {
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px;
 }
 
 div {
   text-align:center;
 }
-
-</style>
+body {
+  display: block;
+  background-color: Beige;
+}
