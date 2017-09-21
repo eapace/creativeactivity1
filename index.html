@@ -1,49 +1,49 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="main.css">
+<title>GPA Caluclator</title>
+</head>
+<body>
 <script>
 var scores = [document.getElementById("score1").value, document.getElementById("score2").value, document.getElementById("score3").value, document.getElementById("score4").value, document.getElementById("score5").value];
 
 var letterConvert = {
-  A: 4.0,
-  A-: 3.7,
-  B+: 3.3,
-  B: 3.0,
-  B-: 2.7,
-  C+: 2.3,
-  C: 2.0,
-  C-: 1.7,
-  D+: 1.3,
-  D: 1.0,
-  D-: 0.7,
-  F: 0.0,
-  E: 0.0
-} 
+  "A": 4.0,
+  "A-": 3.7,
+  "B+": 3.3,
+  "B": 3.0,
+  "B-": 2.7,
+  "C+": 2.3,
+  "C": 2.0,
+  "C-": 1.7,
+  "D+": 1.3,
+  "D": 1.0,
+  "D-": 0.7,
+  "F": 0.0,
+  "E": 0.0
+}; 
 
 var GPA = 0;
 
 function calculate() {
 
-  var grades = 0;
+  var numGrades = 0;
   var totalPoints = 0;
-  for (i = 0; i <scores.size(); i++) {
-    if(scores[i] != null){
-     if(scores[i] != ""){
-      totalPoints += letterConvert[scores[i]];
-      grades++;
+  for (score in scores) {
+    if(scores[score] != null && scores[score] != ""){
+      totalPoints += letterConvert[scores[score]];
+      numGrades++;
      }
-    }
   }
-  if(grades!=0){
-   GPA = (totalPoints/grades);
+  if(numGrades != 0){
+   GPA = (totalPoints / numGrades);
    console.log(GPA);
   }
- return GPA;
-}
+  document.getElementById("display").innerHTML = "Just Kidding. I don't actually want to display your GPA. But here is a picture of a puppy! <img id=\"Pupper\" src=\"http://www.pawderosa.com/images/puppies.jpg\" width=\"400px\"> Here is a link to more puppies! <a href=\"https://www.reddit.com/r/rarepuppers\">Rare Puppers</a> <a href=\"https://www.reddit.com/r/doggos\">Normal Doggos</a> <a href=\"https://www.reddit.com/r/Sneks\">Sneks</a>";
+};
 
 </script>
-</head>
-<body>
-<h1>Welcome to the GPA calculator!</h1>
+<p id="heading">Welcome to the GPA calculator!</p>
 <p>Input your Letter GPA scores.</p>
 
 <div id="allScores">
@@ -55,8 +55,10 @@ Enter Letter Score: <input type="text" id="score4">
 Enter Letter Score: <input type="text" id="score5">
 
 </div>
+<div id="buttondiv">
+<button id="bttn" type="button" onclick="calculate()">Calculate</button>
+<p id="display">Result</p>
 
-<button type="button" onclick="calculate()">Calculate</button>
-<button type="button" onclick="reset()">Reset</button>
+</div>
 </body>
 </html>

@@ -1,3 +1,26 @@
-h1 {
+<style>
 
+#heading {
+  text-align: center;
+  font-size: 50px;
+  color: blue;
 }
+
+p {
+  text-align: center;
+  font-family: verdana;
+}
+
+#allScores {
+  background-color: khaki;
+}
+
+#bttn {
+  margin: 20px;
+}
+
+div {
+  text-align:center;
+}
+
+</style>
